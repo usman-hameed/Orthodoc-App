@@ -1,0 +1,127 @@
+[debug] [2023-01-20T17:42:50.516Z] ----------------------------------------------------------------------
+[debug] [2023-01-20T17:42:50.520Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Usman\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2023-01-20T17:42:50.521Z] CLI Version:   11.16.0
+[debug] [2023-01-20T17:42:50.521Z] Platform:      win32
+[debug] [2023-01-20T17:42:50.521Z] Node Version:  v16.17.0
+[debug] [2023-01-20T17:42:50.523Z] Time:          Fri Jan 20 2023 22:42:50 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-01-20T17:42:50.523Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-20T17:42:50.665Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-20T17:42:50.666Z] > authorizing via signed-in user (usmanmarwat9901@gmail.com)
+[debug] [2023-01-20T17:42:50.666Z] [iam] checking project orthodoc-4a9ee for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-01-20T17:42:50.670Z] > refreshing access token with scopes: []
+[debug] [2023-01-20T17:42:50.673Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-20T17:42:50.673Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:42:51.268Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-01-20T17:42:51.268Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:42:51.269Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions [none]
+[debug] [2023-01-20T17:42:51.269Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions x-goog-quota-user=projects/orthodoc-4a9ee
+[debug] [2023-01-20T17:42:51.270Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-01-20T17:42:51.803Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions 401
+[debug] [2023-01-20T17:42:51.803Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-01-20T17:42:51.805Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-01-20T17:42:51.806Z] > refreshing access token with scopes: []
+[debug] [2023-01-20T17:42:51.808Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-20T17:42:51.809Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:42:52.230Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-01-20T17:42:52.230Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:42:52.231Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/orthodoc-4a9ee/serviceAccounts/orthodoc-4a9ee@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-20T17:42:52.231Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/orthodoc-4a9ee/serviceAccounts/orthodoc-4a9ee@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-20T17:42:53.646Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/orthodoc-4a9ee/serviceAccounts/orthodoc-4a9ee@appspot.gserviceaccount.com:testIamPermissions 401
+[debug] [2023-01-20T17:42:53.646Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/orthodoc-4a9ee/serviceAccounts/orthodoc-4a9ee@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.iam.admin.v1.IAM.TestIamPermissions","service":"iam.googleapis.com"}}]}}
+[debug] [2023-01-20T17:42:53.647Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.iam.admin.v1.IAM.TestIamPermissions","service":"iam.googleapis.com"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401}
+[info] 
+[info] === Deploying to 'orthodoc-4a9ee'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-01-20T17:42:53.664Z] > refreshing access token with scopes: []
+[debug] [2023-01-20T17:42:53.667Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-20T17:42:53.668Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:42:54.084Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-01-20T17:42:54.085Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:42:54.089Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/orthodoc-4a9ee [none]
+[debug] [2023-01-20T17:42:54.571Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/orthodoc-4a9ee 401
+[debug] [2023-01-20T17:42:54.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/orthodoc-4a9ee {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-01-20T17:42:54.572Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-01-20T17:42:55.032Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Usman\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Usman\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project orthodoc-4a9ee. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-01-20T17:44:05.291Z] ----------------------------------------------------------------------
+[debug] [2023-01-20T17:44:05.294Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Usman\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-01-20T17:44:05.296Z] CLI Version:   11.16.0
+[debug] [2023-01-20T17:44:05.296Z] Platform:      win32
+[debug] [2023-01-20T17:44:05.296Z] Node Version:  v16.17.0
+[debug] [2023-01-20T17:44:05.298Z] Time:          Fri Jan 20 2023 22:44:05 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-01-20T17:44:05.299Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-20T17:44:05.432Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-20T17:44:05.433Z] > authorizing via signed-in user (usmanmarwat9901@gmail.com)
+[debug] [2023-01-20T17:44:05.433Z] [iam] checking project orthodoc-4a9ee for permissions ["firebase.projects.get"]
+[debug] [2023-01-20T17:44:05.436Z] > refreshing access token with scopes: []
+[debug] [2023-01-20T17:44:05.440Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-20T17:44:05.440Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:44:06.008Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-01-20T17:44:06.009Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:44:06.010Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions [none]
+[debug] [2023-01-20T17:44:06.010Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions x-goog-quota-user=projects/orthodoc-4a9ee
+[debug] [2023-01-20T17:44:06.010Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-01-20T17:44:07.460Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions 401
+[debug] [2023-01-20T17:44:07.460Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/orthodoc-4a9ee:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-01-20T17:44:07.462Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-01-20T17:44:07.472Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-20T17:44:07.507Z] [functions] Using node@16 from host.
+[debug] [2023-01-20T17:44:07.508Z] defaultcredentials: writing to file C:\Users\Usman\AppData\Roaming\firebase\usmanmarwat9901_gmail_com_application_default_credentials.json
+[debug] [2023-01-20T17:44:07.511Z] DEBUG: Setting GAC to C:\Users\Usman\AppData\Roaming\firebase\usmanmarwat9901_gmail_com_application_default_credentials.json
+[debug] [2023-01-20T17:44:07.512Z] > refreshing access token with scopes: []
+[debug] [2023-01-20T17:44:07.513Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-20T17:44:07.513Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:44:07.902Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-01-20T17:44:07.903Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-20T17:44:07.904Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/orthodoc-4a9ee/adminSdkConfig [none]
+[debug] [2023-01-20T17:44:08.293Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/orthodoc-4a9ee/adminSdkConfig 401
+[debug] [2023-01-20T17:44:08.294Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/orthodoc-4a9ee/adminSdkConfig {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-01-20T17:44:08.294Z] Failed to get Admin SDK config for orthodoc-4a9ee, falling back to cacheFailed to get Admin SDK for Firebase project orthodoc-4a9ee. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project orthodoc-4a9ee. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401},"status":500}
+[warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2023-01-20T17:44:08.307Z] [functions] Watching "D:\OrthoDoc App\toExpo\functions" for Cloud Functions...
+[debug] [2023-01-20T17:44:08.318Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-01-20T17:44:15.277Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-01-20T17:44:15.278Z] Building nodejs source
+[debug] [2023-01-20T17:44:15.278Z] Analyzing nodejs backend spec
+[debug] [2023-01-20T17:44:15.282Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-01-20T17:44:16.067Z] Serving at port 9005
+
+[debug] [2023-01-20T17:44:16.445Z] Got response from /__/functions.yaml {"endpoints":{"createStripeCheckout":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"createStripeCheckout"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-01-20T17:44:16.467Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-01-20T17:44:16.531Z] [functions] Loaded functions definitions from source: createStripeCheckout.
+[debug] [2023-01-20T17:44:16.534Z] [functions[us-central1-createStripeCheckout]] http function initialized (http://127.0.0.1:5000/orthodoc-4a9ee/us-central1/createStripeCheckout).
+[info] i  functions: Loaded functions: createStripeCheckout 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
